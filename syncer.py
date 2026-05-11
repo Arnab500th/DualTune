@@ -6,6 +6,7 @@ from ytmusicapi import YTMusic, OAuthCredentials
 # Decode oauth.json from base64 secret at runtime
 oauth_b64 = os.environ.get("YT_OAUTH_JSON")
 if oauth_b64:
+    oauth_b64 = oauth_b64.strip().lstrip('\ufeff')  # strip BOM + whitespace
     with open("oauth.json", "wb") as f:
         f.write(base64.b64decode(oauth_b64))
 

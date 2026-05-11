@@ -1,4 +1,11 @@
-*.json
 .env
 venv/
 __pycache__/
+oauth.json
+client_secret.json
+*.pyc
+
+# allow sync_state.json to be tracked
+!sync_state.json
+
+oauth_b64.txt
