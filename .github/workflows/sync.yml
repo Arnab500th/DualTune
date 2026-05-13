@@ -2,7 +2,7 @@ name: DualTune Sync
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # every 6 hours
+    - cron: "0 */72 * * *"   # every 6 hours
   workflow_dispatch:          # manual trigger from Actions tab
 
 jobs:
